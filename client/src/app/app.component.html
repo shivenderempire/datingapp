@@ -1,0 +1,10 @@
+<h1>{{title}}</h1>
+<h3 ngClass="{'datashow'}">{{messages}}</h3>
+<button (click)="click(messages)">Show Records</button>
+<div *ngIf='users.length>0; else elseBlock'>
+<ul>
+ <li *ngFor='let user of users'>user id is {{user.id}} and username is {{user.username}}</li>
+</ul>
+</div>
+
+  <ng-template #elseBlock><br/>No Recors Found!!!!!</ng-template>
